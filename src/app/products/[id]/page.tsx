@@ -10,5 +10,5 @@
 // }
 
 export default function Products(){
-    return <h1>Trang products tổng quát! </h1>
+    return <h1>Trang products tổng quát!</h1>
 }
