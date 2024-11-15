@@ -1,9 +1,8 @@
 import { NextResponse } from "next/server";
 
-export const users = [
-  { id: 1, name: "John" },
-  { id: 2, name: "James" },
-];
+const url = "https://6737476eaafa2ef22233436e.mockapi.io/users"
+const response = await fetch(url);
+const users = await response.json();
 
 export async function GET() {
   return NextResponse.json(users);

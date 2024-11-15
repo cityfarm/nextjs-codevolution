@@ -1,11 +1,14 @@
-import { users } from "../route";
+
+const url = "https://6737476eaafa2ef22233436e.mockapi.io/users"
+const response = await fetch(url);
+const users = await response.json();
 
 export async function GET(
-  _request: Request,
+  request: Request,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const id  = (await params).id;
-  const user = users.find((user) => user.id === parseInt(id));
+  const id = (await params).id // 'a', 'b', or 'c'
+  const user = users.find((user: { id: string; }) => user.id === id);
   return Response.json(user);
 }
 
