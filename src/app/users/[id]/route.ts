@@ -2,13 +2,11 @@ import { users } from "../route";
 
 export async function GET(
   _request: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: { id: number } }
 ) {
   const { id } = params;
-  const user = users.find((user) => user.id === parseInt(id));
+  const user = users.find((user) => user.id === id);
 
-  //return Response.json(user);
-  return new Response(JSON.stringify(user), {
-    headers: { "Content-Type": "application/json" },
-  });
+  return Response.json(user);
+  
 }

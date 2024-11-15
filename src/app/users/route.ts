@@ -9,7 +9,7 @@ export async function GET() {
 export async function POST(request: Request) {
   const user = await request.json();
   const newUser = {
-    id: users.length + 1,
+    id:  (users.length + 1),
     name: user.name,
   };
 
