@@ -1,16 +1,7 @@
-import Image from "next/image";
-import headerImg from "@/app/img_avatar1.png"; // Thay bằng ảnh bạn muốn
-
-const Header: React.FC = () => (
-  <header className="w-full h-64 relative">
-    <Image
-      src={headerImg}
-      alt="Header Image"
-      layout="fill"
-      objectFit="cover"
-      className="rounded-b-lg"
-    />
-  </header>
-);
-
-export default Header;
+export const Header = () => {
+  return (
+    <header className="bg-gray-800 text-white p-4 text-center">
+      <p>&copy; 2024 My E-commerce Site. All rights reserved.</p>
+    </header>
+  );
+}
