@@ -40,6 +40,35 @@ export const Navigation = () => {
       >
         Login
       </Link>
+
+      <Link
+        href="/dashboard"
+        className={
+          pathname === "/dashboard" ? "font-bold mr-4" : "mr-4 text-blue-500"
+        }
+      >
+        Dashboard
+      </Link>
+
+
+      <Link
+        href="/mock-users"
+        className={
+          pathname === "/mock-users" ? "font-bold mr-4" : "mr-4 text-blue-500"
+        }
+      >
+        Mock Users
+      </Link>
+
+
+      <Link
+        href="/users-server"
+        className={
+          pathname === "/users-server" ? "font-bold mr-4" : "mr-4 text-blue-500"
+        }
+      >
+        Users  Server
+      </Link>
     </nav>
   );
 };
