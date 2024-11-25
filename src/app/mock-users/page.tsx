@@ -27,7 +27,7 @@ export default async function MockUsers() {
     });
     revalidatePath("mock-users");
     const newUser = await res.json();
-    console.log("succeed added: ",newUser);
+    console.log("succeed added: ", newUser);
   }
 
   return (
