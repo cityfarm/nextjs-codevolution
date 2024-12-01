@@ -11,7 +11,7 @@ export default async function Todos() {
     <div>
       <h1>This is To Do page</h1>
       {todoList.map((todo: { id: string; title: string }) => (
-        <h3>{todo.id}. {todo.title}</h3>
+        <h3 key={todo.id}>{todo.id}. {todo.title}</h3>
       ))}
     </div>
   );

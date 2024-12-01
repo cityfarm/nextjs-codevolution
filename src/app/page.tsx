@@ -1,5 +1,3 @@
-import Image from "next/image";
-import { Greet } from "./components/Greet";
 // import { Counter } from "./components/Counter";
 
 
